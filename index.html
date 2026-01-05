@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim Angelo Ando - Personal Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: white;
+            color: #333;
+            font-family: sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Common Section Styles */
+        section {
+            padding: 30px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        /* Cover Section */
+        #cover {
+            background-color: #4A3A3A;
+            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cover-image {
+            flex: 1 1 300px;
+        }
+
+        .cover-image img {
+            width=100%;
+            height= auto;
+            display= block;
+            
+        }
+        .cover-text {
+            flex: 1 1 300px;
+        }
+
+        .cover-title-top {
+            font-size: 6rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-left: 10px;
+            text-align: center;
+            font-family: 'Times New Roman';
+            
+        }
+
+        .cover-title-bottom {
+            font-size: 6rem;
+            font-family: 'Brush Script MT', cursive;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            text-align: center;
+        }
+
+        .cover-name-course {
+            text-align: middle
+            margin-bottom: 20px;
+            margin-left: 30%;
+            font-size: 25px;
+           
+        }
+
+        .cover-quote {
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        /* About Me Section */
+        #about {
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .about-text {
+            flex: 1 1 350px;
+        }
+        .section-title{
+            font-size: 75px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-align: center;
+            font-family: 'Times New Roman';
+        }
+        .subsection-title {
+            text-transform: uppercase;
+            font-size: 2rem;
+            margin: 20px 0 10px;
+            margin-left: 17%;
+        }
+        
+        ul {
+            text-align: left;
+            list-style-type: disc;
+            margin-left: 17%;
+            font-size: 20px;
+        }
+
+        .about-image {
+            flex: 1 1 350px;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .achievements-box{
+            background-color: rgba(74, 58, 58, 0.8);
+            color: white;
+            padding: 15px;
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            right: 10px;
+        
+        }
+        .achivement-ul{
+            
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 15px;
+        }
+        /* Family Section */
+        #family {
+            background-color: #4A3A3A;
+            color: #fff;
+        }
+
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .family-card {
+            text-align: center;
+        }
+
+        .family-card img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+            border: 2px solid #fff;
+        }
+
+        .siblings-group {
+            grid-column: span 2;
+        
+        }
+
+        .siblings-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .siblings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        /* Friends Section */
+        #friends {
+            background-color: #fff;
+        }
+
+        .friends-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .friend-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 8px;
+        }
+
+        /* Hobby Section */
+        #hobby {
+            background-color: #4A3A3A;
+            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .hobby-text {
+            flex: 1 1 300px;
+        }
+
+        .hobby-text p {
+            font-size: 1.1rem;
+        }
+
+        .hobby-image {
+            flex: 1 1 300px;
+        }
+
+        .hobby-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .img-caption {
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .contact-photo {
+            flex: 1 1 350px;
+        }
+
+        .contact-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .contact-details {
+            flex: 1 1 350px;
+            background-color: #4A3A3A;
+            color: #fff;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .contact-title-top {
+            font-weight: bold;
+        }
+
+        .contact-title-bottom {
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            
+        }
+        .contact-info a {
+        color: white;
+        text-decoration: none;
+        }
+        
+        a:hover{
+            background-color: green;
+        }
+        
+        .collabs-note {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 30px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            .siblings-group {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Section -->
+    <section id="cover">
+        <div class="cover-image">
+            <img src="/danielpadilla.jpg" alt="Kim Angelo Ando">
+            <div class="cover-quote">
+              "Hi, I'm Kim 20 yo. Studying at KLL. I'm passionate about writing code, solving problems, and playing tactical game."
+           </div>
+        </div>
+        <div class="cover-text">
+            <header class="cover-title-top">PERSONAL </header> 
+            <header class="cover-title-bottom">PORTFOLIO </header> 
+            <div class="cover-name-course">
+                Kim Angelo Ando<br>
+                BSCS - 1H
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="about-text">
+            <h2 class="section-title">ABOUT<br>ME</h2>
+            
+            <h3 class="subsection-title">Personal Details</h3>
+            <ul>
+                <li>Kim Angelo T. Ando</li>
+                <li>October 15, 2005</li>
+                <li>Malaglagong ng Lungsod ng Lipa, Batangas</li>
+            </ul>
+            
+            <h3 class="subsection-title">Academic Background</h3>
+            <ul>
+                <li>College student, Bachelor of Science in Computer Science</li>
+                <li>Studying at Kolehiyo ng Lungsod ng Lipa</li>
+                <li>Programming, Data Structures, Algorithm Design</li>
+            </ul>
+        </div>
+        <div class="about-image">
+            <img src="/medal.jpg" alt="Kim with award">
+            <div class="achievements-box">
+                <h3>Achievements and Award</h3>
+                <ul class ="achivement-ul" alt ="">
+                    <li>Graduated with Honors</li>
+                    <li>Karate Green Belt Holder (2015)</li>
+                    <li>Learning a new language, computer skills, or leading a project</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Members Section -->
+    <section id="family">
+        <h2 class="section-title">FAMILY<br>MEMBERS</h2>
+        <div class="family-grid">
+            <div class="family-card">
+                <img src="/mama.jpg" alt="Maria T. Ando">
+                <h3>MARIA T. ANDO</h3>
+                <p>THE BEST MOM IN THE WORLD</p>
+            </div>
+            <div class="family-card">
+                <img src="/papa.jpg" alt="Kinglarsky B. Ando">
+                <h3>KINGLARSKY B. ANDO</h3>
+                <p>WORKS AS AN TRICYCLE DRIVER</p>
+            </div>
+            <div class="siblings-group">
+                <h3 class="siblings-title">MY 3 BROTHERS AND 1 SISTER</h3>
+                <div class="siblings-grid">
+                    <div class="family-card">
+                        <img src="/kuyajanjan.jpg" alt="John Mark">
+                        <h3>JOHN MARK</h3>
+                        <p>WORKS AS AN IT MANAGER</p>
+                    </div>
+                    <div class="family-card">
+                        <img src="/napilitangako.jpg" alt="The Wise Man">
+                        <h3>THE WISE MAN</h3>
+                    </div>
+                    <div class="family-card">
+                        <img src="/kuyamak.jpg" alt="Mark Joseph">
+                        <h3>MARK JOSEPH</h3>
+                        <p>WORKS AS AN SECURITY GUARD</p>
+                    </div>
+                    <div class="family-card">
+                        <img src="/princess.jpg" alt="Princess Kae">
+                        <h3>PRINCESS KAE</h3>
+                        <p>STUDYING AT BOLBOK  INTEGRATED NATIONAL HIGHSCHOOL</p>
+                    </div>
+                    <div class="family-card">
+                        <img src="/broks.jpg" alt="Kyle Justine">
+                        <h3>KYLE JUSTINE</h3>
+                        <p>STUDIES BSBA IN COLLEGE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Friends Section -->
+    <section id="friends">
+        <h2 class="section-title">FRIENDS</h2>
+        <div class="friends-grid">
+            <div class="friend-card">
+                <img src="/prends.jpg" alt="Group photo with friends">
+                <p>That time we took a picture with my friends album not bet</p>
+            </div>
+            <div class="friend-card">
+                <img src="/beautifulgirl.jpg" alt="With girlfriend">
+                <p>With my Girlfriend, Life is better with her</p>
+            </div>
+            <div class="friend-card">
+                <img src="/classmeyt.jpg" alt="SHS barkada">
+                <p>My SHS barkada, so grateful to have them</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobby Section -->
+    <section id="hobby">
+        <div class="hobby-text">
+            <h2 class="section-title">HOBBY</h2>
+            <p>
+                I taught myself 2 years ago, and now I spend evenings strumming folk songs or making up silly tunes. It’s my perfect escape from a busy day.
+            </p>
+        </div>
+        <div class="hobby-image">
+            <img src="/guitarist.jpg" alt="Playing guitar">
+            <p class="img-caption">Practicing the OPM song</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-photo">
+            <img src="/pogiko.jpg" alt="Kim Angelo">
+        </div>
+        <div class="contact-details">
+            <div>
+                <h2 class="section-title">
+                    <span class="contact-title-top">GET IN</span><br>
+                    <span class="contact-title-bottom">TOUCH</span>
+                </h2>
+                <div class="contact-info">
+                    <p>Email:<br><a href="mailto:kimangelo020@gmail.com">kimangelo020@gmail.com</a>
+                    </p>
+                    <p>Instagram:<br><a href="https://www.instagram.com/jiichaannnnnnn?igsh=eWVpY2VrYWl5amVn">JIICHANNNNNNN</a></p>
+                    <p>Facebook:<br><a href="https://www.facebook.com/share/1EiNYPHpoC/">Kim Angelo</a> <br></p>
+                </div>
+            </div>
+            <p class="collabs-note">OPEN FOR COLLABS</p>
+        </div>
+    </section>
+</body>
+</html>
